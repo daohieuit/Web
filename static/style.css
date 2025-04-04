@@ -1,0 +1,238 @@
+html {
+    font-size: 16px;
+    background-color: #eceff1;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #006A71;
+    color: #F2EFE7;
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    justify-self: start;
+}
+
+.inter-700 {
+    justify-self: center;
+}
+
+.auth-button {
+    background-color: #48A6A7;
+    color: #F2EFE7;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-self: end;
+}
+
+/* Nav */
+.nav {
+    background-color: #9ACBD0;
+    padding: 1.5rem 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 2.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Main - Login Page */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - (/* height của header */ 60px + /* height của nav */ 71px + /* height của footer */ 60px)); /* Đảm bảo hiển thị đầy đủ chiều cao */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #006A71;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-button {
+    background-color: #006A71;
+    color: #F2EFE7;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-button:hover {
+    background-color: #005663;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup-link a {
+    color: #006A71;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: #9ACBD0;
+    padding: 1rem 0;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list li {
+    margin: 0 2rem;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Font Classes */
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inter-100 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 100; font-style: normal; }
+.inter-200 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 200; font-style: normal; }
+.inter-300 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 300; font-style: normal; }
+.inter-400 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+.inter-500 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal; }
+.inter-600 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; }
+.inter-700 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; }
+.inter-800 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; }
+.inter-900 { font-family: "Inter", sans-serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; }
+
+.merriweather-300 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 300; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-400 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-500 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 500; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-600 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-700 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-800 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; font-variation-settings: "wdth" 100; }
+.merriweather-900 { font-family: "Merriweather", serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; font-variation-settings: "wdth" 100; }
+
+.raleway-100 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 100; font-style: normal; }
+.raleway-200 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 200; font-style: normal; }
+.raleway-300 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 300; font-style: normal; }
+.raleway-400 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; }
+.raleway-500 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal; }
+.raleway-600 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; }
+.raleway-700 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 700; font-style: normal; }
+.raleway-800 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; }
+.raleway-900 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; }
+
+/* From Uiverse.io by Shakil-Babu */
+.btn {
+    background-color: #48A6A7;
+    padding: 10px 15px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #48A6A7;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.btn span:last-child {
+    display: none;
+}
+
+.btn:hover {
+    transition: .4s;
+    border: 2px dashed #48A6A7;
+    background-color: #fff;
+    color: #48A6A7;
+}
+
+.btn:active {
+    background-color: #9ACBD0;
+}
