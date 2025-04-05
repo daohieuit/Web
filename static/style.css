@@ -18,8 +18,8 @@ body {
 }
 
 .header-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid; /* Sử dụng grid layout */
+    grid-template-columns: 1fr 1fr 1fr; /* Chia thành 3 cột bằng nhau */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -28,21 +28,21 @@ body {
 .logo {
     width: 80px;
     height: auto;
-    justify-self: start;
+    justify-self: start; /* Căn logo về bên trái */
 }
 
 .inter-700 {
-    justify-self: center;
+    justify-self: center; /* Căn tiêu đề vào giữa */
 }
 
 .auth-button {
     background-color: #48A6A7;
     color: #F2EFE7;
     border: none;
-    padding: 0.5rem 1rem;
     border-radius: 5px;
+    padding: 0.25rem 0.55rem !important;
     cursor: pointer;
-    justify-self: end;
+    justify-self: end; /* Căn button về bên phải */
 }
 
 /* Nav */
@@ -70,82 +70,79 @@ body {
     font-weight: 700;
 }
 
-/* Main - Login Page */
-.login-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    min-height: calc(100vh - (/* height của header */ 60px + /* height của nav */ 71px + /* height của footer */ 60px)); /* Đảm bảo hiển thị đầy đủ chiều cao */
+/* Main */
+.main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.login-container {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
-    max-width: 100%;
+.banner {
+    position: relative;
 }
 
-.login-title {
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.banner-content {
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    margin-bottom: 1.5rem;
+    color: #F2EFE7;
+    width: 100%;
+}
+
+.banner-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     color: #006A71;
 }
 
-.login-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
-
-.form-group input[type="text"],
-.form-group input[type="password"] {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.banner-description {
     font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 40%;
+    color: #006A71;
+    margin: 0 auto 2rem;
 }
 
-.login-button {
+.start-button {
     background-color: #006A71;
     color: #F2EFE7;
     border: none;
-    padding: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    transform: translateX(-50%);
 }
 
-.login-button:hover {
-    background-color: #005663;
+.intro {
+    text-align: left;
+    margin-top: 2rem;
 }
 
-.signup-link {
+.intro h2 {
     text-align: center;
-    margin-top: 1rem;
 }
 
-.signup-link a {
-    color: #006A71;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.signup-link a:hover {
-    text-decoration: underline;
+.explore-button {
+    background-color: #006A71;
+    color: #F2EFE7;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2rem auto 0;
+    display: block;
 }
 
 /* Footer */
@@ -208,7 +205,7 @@ body {
 .raleway-800 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; }
 .raleway-900 { font-family: "Raleway", sans-serif; font-optical-sizing: auto; font-weight: 900; font-style: normal; }
 
-/* From Uiverse.io by Shakil-Babu */
+/* From Uiverse.io by Shakil-Babu */ 
 .btn {
     background-color: #48A6A7;
     padding: 10px 15px;
@@ -235,4 +232,161 @@ body {
 
 .btn:active {
     background-color: #9ACBD0;
+}
+/* Main - Login Page */
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - (/* height của header */ 60px + /* height của nav */ 71px + /* height của footer */ 60px)); /* Đảm bảo hiển thị đầy đủ chiều cao */
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #006A71;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.login-input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-submit-button {
+    background-color: #006A71;
+    color: #F2EFE7;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.login-submit-button:hover {
+    background-color: #005663;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.signup-link a {
+    color: #006A71;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Main - Signup Page */
+.main-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - (/* height của header */ 60px + /* height của nav */ 71px + /* height của footer */ 60px)); /* Đảm bảo hiển thị đầy đủ chiều cao */
+}
+
+.signup-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Tăng kích thước container cho nhiều trường hơn */
+    max-width: 100%;
+}
+
+.signup-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #006A71;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.signup-input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup-submit-button {
+    background-color: #006A71;
+    color: #F2EFE7;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.signup-submit-button:hover {
+    background-color: #005663;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.login-link a {
+    color: #006A71;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
 }

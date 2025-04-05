@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/test.css">
+    <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
     <header class="header">
@@ -19,7 +19,7 @@
     </header>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="./template.html" class="inter-600">Trang chủ</a></li>
+            <li><a href="#" class="inter-600">Trang chủ</a></li>
             <li><a href="" class="inter-600">Luyện đề</a></li>
             <li><a href="" class="inter-600">Tài liệu</a></li>
             <li><a href="" class="inter-600">Liên hệ</a></li>
@@ -63,6 +63,14 @@
             <li><a href="" class="inter-600">Chính sách bảo mật</a></li>
         </ul>
     </footer>
-    <script src="../static/main.js"></script>
+    <script>
+        const buttonsToLogin = document.querySelectorAll('.redirect-to-login');
+
+        buttonsToLogin.forEach(button => {
+            button.addEventListener('click', function() {
+                window.location.href = 'templates/login.html';
+            });
+        });
+    </script>
 </body>
 </html>
