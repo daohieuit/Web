@@ -70,6 +70,10 @@ body {
     font-weight: 700;
 }
 
+.nav-list a:hover{
+    color: #006A71;
+}
+
 /* Main */
 .main {
     max-width: 1200px;
@@ -389,4 +393,98 @@ body {
 
 .login-link a:hover {
     text-decoration: underline;
+}
+
+.images_container {
+    display: flex; /* Sắp xếp các phần tử con (hai ảnh) theo hàng ngang */
+    justify-content: center; /* Căn giữa các ảnh theo chiều ngang */
+    align-items: center; /* Căn giữa các ảnh theo chiều dọc (nếu cần) */
+    gap: 20px; /* Tạo khoảng cách giữa hai ảnh (tùy chỉnh giá trị) */
+    margin-top: 20px; /* Thêm khoảng cách phía trên container ảnh (tùy chỉnh) */
+    margin-bottom: 20px; /* Thêm khoảng cách phía dưới container ảnh (tùy chỉnh) */
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng của phần tử cha */
+}
+
+.images_container img {
+    max-width: 45%; /* Đặt chiều rộng tối đa cho mỗi ảnh (tùy chỉnh tỷ lệ) */
+    height: auto; /* Duy trì tỷ lệ khung hình của ảnh */
+    border-radius: 8px; /* Bo tròn góc ảnh (tùy chọn) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng bóng đổ (tùy chọn) */
+}
+
+/* Main - Contact Page */
+.main-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - (/* height của header */ 60px + /* height của nav */ 71px + /* height của footer */ 60px)); /* Đảm bảo hiển thị đầy đủ chiều cao */
+    background-color: #f9f9f9; /* Màu nền khác biệt (tùy chọn) */
+}
+
+.contact-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 95%;
+}
+
+.contact-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #006A71;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.company-info {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.company-info h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #006A71;
+}
+
+.company-info p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.company-images {
+    display: flex; /* Sắp xếp ảnh theo hàng ngang */
+    gap: 15px; /* Khoảng cách giữa các ảnh */
+    margin-top: 1rem;
+}
+
+.company-images img {
+    max-width: 50%; /* Mỗi ảnh chiếm tối đa 50% chiều rộng container */
+    height: auto;
+    border-radius: 5px; /* Bo tròn góc ảnh (tùy chọn) */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ nhẹ (tùy chọn) */
+}
+
+.contact-details {
+    margin-bottom: 2rem;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact-details h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #006A71;
+}
+
+.contact-details p {
+    margin-bottom: 0.5rem;
 }
