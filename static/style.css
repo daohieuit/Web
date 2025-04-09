@@ -488,3 +488,45 @@ body {
 .contact-details p {
     margin-bottom: 0.5rem;
 }
+
+.main-tai-lieu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các div */
+    padding: 20px;
+}
+
+.main-tai-lieu-item {
+    width: calc(33.33% - 20px); /* Chiếm 1/3 trừ khoảng cách */
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.main-tai-lieu-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.main-tai-lieu-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .main-tai-lieu-item {
+        width: calc(50% - 20px); /* Chiếm 1/2 */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-tai-lieu-item {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+    }
+}

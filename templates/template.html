@@ -14,12 +14,12 @@
         <div class="header-content">
             <a href="../index.html"><img src="../static/images/logo.png" alt="web_logo" class="logo"></a>
             <h1 class="inter-700">LUYỆN THI ONLINE</h1>
-            <button class="auth-button inter-600 btn redirect-to-login">Đăng nhập / Đăng ký</button>
+            <button class="auth-button inter-600 btn redirect-to-login" data-login-url="{{ url_for('login') }}">Đăng nhập / Đăng ký</button>
         </div>
     </header>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="../index.html" class="inter-600">Trang chủ</a></li>
+            <li><a href="./index.html" class="inter-600">Trang chủ</a></li>
             <li><a href="" class="inter-600">Luyện đề</a></li>
             <li><a href="" class="inter-600">Tài liệu</a></li>
             <li><a href="./contact.html" class="inter-600">Liên hệ</a></li>
@@ -35,6 +35,6 @@
             <li><a href="" class="inter-600">Chính sách bảo mật</a></li>
         </ul>
     </footer>
-    <script src="../static/main.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

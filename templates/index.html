@@ -7,32 +7,32 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <a href="#"><img src="./static/images/logo.png" alt="web_logo" class="logo"></a>
+            <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="web_logo" class="logo"></a>
             <h1 class="inter-700">LUYỆN THI ONLINE</h1>
-            <button class="auth-button inter-600 btn redirect-to-login">Đăng nhập / Đăng ký</button>
+            <button class="auth-button inter-600 btn redirect-to-login" data-login-url="{{ url_for('login') }}">Đăng nhập / Đăng ký</button>
         </div>
     </header>
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="#" class="inter-600">Trang chủ</a></li>
-            <li><a href="" class="inter-600">Luyện đề</a></li>
-            <li><a href="" class="inter-600">Tài liệu</a></li>
-            <li><a href="./templates/contact.html" class="inter-600">Liên hệ</a></li>
+            <li><a href="{{ url_for('index') }}" class="inter-600">Trang chủ</a></li>
+            <li><a href="{{ url_for('exams') }}" class="inter-600">Luyện đề</a></li>
+            <li><a href="{{ url_for('document') }}" class="inter-600">Tài liệu</a></li>
+            <li><a href="{{ url_for('contact') }}" class="inter-600">Liên hệ</a></li>
         </ul>
     </nav>
     <main class="main">
         <section class="banner">
-            <img src="./static/images/banner.jpg" alt="banner">
+            <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="banner">
             <div class="banner-content">
                 <h2 class="banner-title anton-regular">CHINH PHỤC ĐỈNH CAO TRI THỨC!</h2>
                 <p class="banner-description merriweather-400">Khám phá kho tàng đề thi và tài liệu luyện tập phong phú, được biên soạn bởi đội ngũ giáo viên giàu kinh nghiệm.</p>
             </div>
-            <button class="start-button inter-600 redirect-to-login">Bắt đầu ngay</button>
+            <button class="start-button inter-600 redirect-to-login" data-login-url="{{ url_for('login') }}">Bắt đầu ngay</button>
         </section>
         <section class="intro">
             <h2 class="inter-700">Chào mừng đến với nền tảng Luyện thi trực tuyến dành cho học sinh Việt Nam</h2>
@@ -53,28 +53,20 @@
             </ul>
             <p class="raleway-400">Với giao diện thân thiện và dễ sử dụng, chúng tôi tin rằng nền tảng này sẽ là một công cụ hỗ trợ đắc lực cho cả học sinh và giáo viên trong quá trình dạy và học. Hãy cùng chúng tôi xây dựng một cộng đồng học tập trực tuyến năng động và hiệu quả!</p>
             <div class="images_container">
-                <img src="./static/images/main_img_1.jpg" alt="main_img_1">
-                <img src="./static/images/main_img_2.jpg" alt="main_img_2">
+                <img src="{{ url_for('static', filename='images/main_img_1.jpg') }}" alt="main_img_1">
+                <img src="{{ url_for('static', filename='images/main_img_2.jpg') }}" alt="main_img_2">
             </div>
-            <button class="explore-button inter-600 btn redirect-to-login">Khám phá ngay</button>
+            <button class="explore-button inter-600 btn redirect-to-login" data-login-url="{{ url_for('login') }}">Khám phá ngay</button>
         </section>
     </main>
     <footer class="footer">
         <ul class="footer-list">
-            <li><a href="./templates/contact.html" class="inter-600">Thông tin liên hệ</a></li>
+            <li><a href="{{ url_for('contact') }}" class="inter-600">Thông tin liên hệ</a></li>
             <li><a href="" class="inter-600">Mạng xã hội</a></li>
             <li><a href="" class="inter-600">Điều khoản sử dụng</a></li>
             <li><a href="" class="inter-600">Chính sách bảo mật</a></li>
         </ul>
     </footer>
-    <script>
-        const buttonsToLogin = document.querySelectorAll('.redirect-to-login');
-
-        buttonsToLogin.forEach(button => {
-            button.addEventListener('click', function() {
-                window.location.href = 'templates/login.html';
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>
